@@ -1,0 +1,15 @@
+---
+- name: "{{ fakesmtp_task_prefix }} Provision fakesmtp container"
+  docker_container:
+    image: "{{ fakesmtp_image }}"
+    name: "{{ fakesmtp_name }}"
+    pull: "{{ fakesmtp_pull }}"
+    recreate: "{{ fakesmtp_recreate }}"
+    restart_policy: "{{ fakesmtp_restart_policy }}"
+    state: "{{ fakesmtp_state }}"
+    ports:
+      - "{{ fakesmtp_ext_addr }}:{{ fakesmtp_ext_port_smtp1 }}:1025"
+      - "{{ fakesmtp_ext_addr }}:{{ fakesmtp_ext_port_smtp2 }}:1025"
+      - "{{ fakesmtp_ext_addr }}:{{ fakesmtp_ext_port_smtp3 }}:1025"
+      - "{{ fakesmtp_ext_addr }}:{{ fakesmtp_ext_port_smtp4 }}:1025"
+      - "{{ fakesmtp_ext_web }}:{{ fakesmtp_ext_port_web }}:1080"

@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Valentin Gostev
+  role_name: fakesmtp
+  description: Provision fakesmtp container
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+  galaxy_tags:
+    - fakesmtp
+    - smtp
+dependencies: []
+  

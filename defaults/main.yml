@@ -1,0 +1,15 @@
+---
+fakesmtp_task_prefix: "=== FAKESMTP ==="
+fakesmtp_image: "reachfive/fake-smtp-server"
+fakesmtp_name: "fakesmtp"
+fakesmtp_pull: "no"
+fakesmtp_recreate: "no"
+fakesmtp_restart_policy: "always"
+fakesmtp_state: "started"
+fakesmtp_ext_addr: '127.0.0.1'
+fakesmtp_ext_web: '127.0.0.1'
+fakesmtp_ext_port_smtp1: "25"
+fakesmtp_ext_port_smtp2: "465"
+fakesmtp_ext_port_smtp3: "1025"
+fakesmtp_ext_port_smtp4: "587"
+fakesmtp_ext_port_web: "1080"
